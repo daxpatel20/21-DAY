@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+
+    <div class="weather-box">
+        <h2 class="this">
+            CHECK THIS WERTHER
+        </h2>
+
+        <div class="input-area">
+            <input type="text" id="cityName" placeholder="Enter city name ">
+            <button id="btn">Search</button>
+        </div>
+
+        <p id="err" class="error"></p>
+
+        <div class="info-box">
+             <div class="info-card">
+                <h4>
+                    <img id="icon" src="" alt=" ">
+                </h4>
+            </div>
+
+            <div class="info-card">
+                <h4>Temperature</h4>
+                <p id="temp">--</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Humidity</h4>
+                <p id="humidity">--</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Wind Speed</h4>
+                <p id="speed">--</p>
+            </div>
+
+            <div class="info-card">
+                <h4>Min / Max</h4>
+                <p id="minmax">--</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", async () => {
+
+            let cityname = document.getElementById("cityName").value;
+
+            const KEY = "024ced2b4c81550d546f502bbf3d8449";
+            const APIURL = "https://api.openweathermap.org/data/2.5/weather?";
+
+            if (cityname === "") {
+                document.getElementById("err").innerHTML = "Please enter a city!";
+                return;
+            }
+
+            try {
+                const res = await fetch(`${APIURL}q=${cityname}&appid=${KEY}&units=metric`);
+                const data = await res.json();
+
+                if (res.status === 404) {
+                    document.getElementById("err").innerHTML = "City not found!";
+                    document.getElementById("temp").innerHTML = "";
+                    document.getElementById("humidity").innerHTML = "";
+                    document.getElementById("icon").style.display = "none";
+                    return;
+                }
+
+                document.getElementById("err").innerHTML = "";
+                document.getElementById("temp").innerHTML = `${data.main.temp}°C`;
+                document.getElementById("humidity").innerHTML = `Humidity: ${data.main.humidity}%`;
+                document.getElementById("speed").innerHTML = `Wind: ${data.wind.speed} km/h`;
+
+              
+                document.getElementById("minmax").innerHTML =
+                    `${Math.round(data.main.temp_min)}°C / ${Math.round(data.main.temp_max)}°C`;
+
+
+                document.getElementById("icon").style.display = "block";
+                document.getElementById("icon").src =
+                    `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
+
+            } catch (error) {
+                document.getElementById("err").innerHTML = "Error fetching data";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
