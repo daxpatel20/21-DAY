@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dax</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header>
+            <h1>Product Explorer</h1>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+
+
+        <div class="filters">
+            <button class="active" onclick="filterProducts('all', this)">All</button>
+            <button onclick="filterProducts('electronics', this)">Electronics</button>
+            <button onclick="filterProducts('clothing', this)">Clothing</button>
+            <button onclick="filterProducts('books', this)">Books</button>
+        </div>
+
+
+        <div id="productList" class="product-grid"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
