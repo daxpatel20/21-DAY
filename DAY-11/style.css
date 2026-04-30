@@ -1,0 +1,92 @@
+body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+    }
+
+.game-container {
+        width: 400px;
+        background: #0f172a;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+        text-align: center;
+    }
+
+ h1 {
+        margin-bottom: 10px;
+    }
+
+.hud {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+.progress-bar {
+        width: 100%;
+        height: 8px;
+        background: #334155;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+#progressBarFull {
+        height: 100%;
+        width: 0%;
+        background: limegreen;
+        transition: width 0.3s;
+    }
+
+#timerBar {
+        height: 6px;
+        background: red;
+        width: 100%;
+        margin-bottom: 15px;
+        transition: width 1s linear;
+    }
+
+#question {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+button {
+        width: 100%;
+        padding: 12px;
+        margin: 6px 0;
+        border: none;
+        border-radius: 8px;
+        background: #3b82f6;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.2s, background 0.3s;
+    }
+
+button:hover {
+        transform: scale(1.05);
+        background: #2563eb;
+    }
+
+.correct {
+        background: #22c55e !important;
+    }
+
+.wrong {
+        background: #ef4444 !important;
+    }
+
+#nextBtn {
+        margin-top: 10px;
+        background: #f59e0b;
+    }
+
+#nextBtn:hover {
+        background: #d97706;
+    }
