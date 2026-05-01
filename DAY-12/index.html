@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dax</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="app-shell">
+
+    <div class="card-ui">
+
+        <div class="header-ui">
+            <h1>Password Generator</h1>
+        </div>
+
+        <div class="screen-ui">
+            <span id="outputText">Click Generate</span>
+        </div>
+
+        <div class="controls-ui">
+
+            <label class="switch-ui">
+                <input type="checkbox" id="optUpper" checked>
+                <span>Uppercase</span>
+            </label>
+
+            <label class="switch-ui">
+                <input type="checkbox" id="optLower" checked>
+                <span>Lowercase</span>
+            </label>
+
+            <label class="switch-ui">
+                <input type="checkbox" id="optNums" checked>
+                <span>Numbers</span>
+            </label>
+
+            <label class="switch-ui">
+                <input type="checkbox" id="optSymbols" checked>
+                <span>Symbols</span>
+            </label>
+
+        </div>
+
+        <button id="actionBtn" class="main-btn">
+            GENERATE
+        </button>
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
