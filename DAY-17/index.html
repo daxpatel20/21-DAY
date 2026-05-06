@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>dax</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+
+    <h2 id="title">Sign Up</h2>
+
+    
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Full Name">
+
+      <input type="email" id="email" placeholder="Email">
+      
+      <input type="password" id="password" placeholder="Password">
+
+      <input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+      <p class="error" id="signupError"></p>
+
+      <button type="button" onclick="signup()">Create Account</button>
+
+      <p class="switch">Already have an account? <span onclick="toggleForm()">Login</span></p>
+
+    </form>
+
+   
+    <form id="loginForm" class="hidden">
+
+      <input type="email" id="loginEmail" placeholder="Email">
+
+      <input type="password" id="loginPassword" placeholder="Password">
+      
+      <p class="error" id="loginError"></p>
+
+      <button type="button" onclick="login()">Login</button>
+
+      <p class="switch">Don't have an account? <span onclick="toggleForm()">Signup</span></p>
+
+    </form>
+
+
+    <div id="alertBox"></div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
