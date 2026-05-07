@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dax</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2 class="logo">Dax patel</h2>
+
+            <ul class="menu">
+                <li class="active"><i class="fa-solid fa-house"></i> Dashboard</li>
+                <li><i class="fa-solid fa-user"></i> Profile</li>
+                <li><i class="fa-solid fa-chart-line"></i> Analytics</li>
+                <li><i class="fa-solid fa-message"></i> Messages</li>
+                <li><i class="fa-solid fa-gear"></i> Settings</li>
+            </ul>
+        </aside>
+
+
+        <main class="main-content">
+            <div class="navbar">
+                <h1>Dashboard</h1>
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+                    <i class="fa-solid fa-users"></i>
+                    <h2 id="users">0</h2>
+                    <p>Total Users</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h2 id="orders">0</h2>
+                    <p>Total Orders</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <h2 id="revenue">0</h2>
+                    <p>Total Revenue</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <h2 id="growth">0%</h2>
+                    <p>Growth</p>
+                </div>
+
+            </div>
+
+            <div class="table-section">
+                <h2>Recent Orders</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Product</th>
+                            <th>Status</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tableData">
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
