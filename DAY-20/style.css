@@ -1,0 +1,195 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#000;
+  color:#fff;
+}
+
+
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  background:rgba(0,0,0,0.7);
+  z-index:100;
+}
+
+.logo{
+  color:red;
+  font-size:2rem;
+  font-weight:700;
+}
+
+.nav-links{
+  display:flex;
+  gap:20px;
+  list-style:none;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+}
+
+.menu-btn{
+  display:none;
+  font-size:2rem;
+  cursor:pointer;
+}
+
+.hero{
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1974&auto=format&fit=crop') center/cover;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+}
+
+.hero-content{
+  position:relative;
+  text-align:center;
+  z-index:2;
+}
+
+.hero-content h1{
+  font-size:4rem;
+}
+
+.hero-content p{
+  margin:20px 0;
+  font-size:1.3rem;
+}
+
+.hero-buttons button{
+  padding:12px 25px;
+  border:none;
+  margin:10px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.play-btn{
+  background:red;
+  color:white;
+}
+
+.info-btn{
+  background:#333;
+  color:white;
+}
+
+
+.movies-section{
+  padding:50px;
+}
+
+.movie-row{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+}
+
+.movie-card img{
+  width:200px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.movie-card img:hover{
+  transform:scale(1.1);
+}
+
+
+.page{
+  padding:120px 50px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+
+.movie-box{
+  background:#111;
+  padding:50px;
+  text-align:center;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.movie-box:hover{
+  transform:translateY(-10px);
+  background:red;
+}
+
+.download-card{
+  background:#111;
+  padding:20px;
+  border-radius:10px;
+  width:300px;
+}
+
+.progress{
+  width:100%;
+  height:10px;
+  background:#333;
+  margin-top:10px;
+  border-radius:20px;
+}
+
+.progress-bar{
+  width:75%;
+  height:100%;
+  background:red;
+  border-radius:20px;
+}
+
+
+.profile-page{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.profile-card{
+  background:#111;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  width:350px;
+}
+
+.avatar{
+  width:120px;
+  border-radius:50%;
+  margin-bottom:20px;
+}
+
+.profile-card button{
+  margin-top:20px;
+  padding:10px 20px;
+  border:none;
+  background:red;
+  color:white;
+  border-radius:5px;
+}
+
